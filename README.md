@@ -188,7 +188,7 @@ class MLPlay:
   "state": "FAIL",
   "attachment": [
     {
-        "player": "1P",
+        "player_num": "1P",
         "coin":1,
         "distance": "6490m",
         "single_rank":1,
