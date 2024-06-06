@@ -226,7 +226,7 @@ class RacingCar(PaiaGame):
         """
 
         return {"frame_used": self.frame_count,
-                "state": self.game_result_state,
+                "status": self.game_result_state,
                 "attachment": self.rank()
                 }
 
