@@ -21,7 +21,7 @@
 
 ## 撰寫玩遊戲的程式
 
-程式範例在 [`ml/ml_play_template.py`](https://github.com/yen900611/RacingCar/blob/master/ml/ml_play_template.py)。
+程式範例在 [`ml/ml_play_template.py`](https://github.com/PAIA-Playful-AI-Arena/racing_car/blob/master/ml/ml_play_template.py)。
 
 
 ### 遊戲場景資訊
