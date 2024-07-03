@@ -91,14 +91,14 @@ class CoinMode(GameMode):
         tem = []
         for user in self.winner:
             tem.append({
-                "player": str(user.car_no + 1) + "P",
+                "player_num": str(user.car_no + 1) + "P",
                 "coin": str(user.coin_num),
                 "used_frames": str(user.used_frame)+" frames",
                 "distance": str(round(user.distance)) + "m",
                 "single_rank": self.winner.index(user) + 1
             })
             print({
-                "player": str(user.car_no + 1) + "P",
+                "player_num": str(user.car_no + 1) + "P",
                 "coin": str(user.coin_num),
                 "used_frames": str(user.used_frame)+" frames",
                 "distance": str(round(user.distance)) + "m",

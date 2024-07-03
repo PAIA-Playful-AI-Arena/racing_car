@@ -19,7 +19,7 @@
 
 ## 啟動方式
 
-- 直接啟動 [main.py](https://github.com/yen900611/RacingCar/blob/master/main.py) 即可執行
+- 直接啟動 [main.py](https://github.com/PAIA-Playful-AI-Arena/racing_car/blob/master/main.py) 即可執行
 
 ### 遊戲參數設定
 
@@ -188,7 +188,7 @@ class MLPlay:
   "state": "FAIL",
   "attachment": [
     {
-        "player": "1P",
+        "player_num": "1P",
         "coin":1,
         "distance": "6490m",
         "single_rank":1,

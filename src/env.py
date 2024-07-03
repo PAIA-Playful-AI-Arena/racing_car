@@ -21,7 +21,7 @@ LIGHT_BLUE = "##21A1F1"
 
 '''object size'''
 car_size = (60, 30)
-coin_size = (30,31)
+coin_size = (30,30)
 lane_size = (20,3)
 
 '''command'''
@@ -35,28 +35,28 @@ ASSET_IMAGE_DIR = path.join(path.dirname(__file__), "../asset/image")
 IMAGE_DIR = path.join(path.dirname(__file__), 'image')
 SOUND_DIR = path.join(path.dirname(__file__), 'sound')
 BACKGROUND_IMAGE = ["ground0.jpg"]
-COIN_IMAGE = "logo.png"
+COIN_IMAGE = "coin.png"
 RANKING_IMAGE = ["info_coin.png", "info_km.png"]
 
 START_LINE_IMAGE = ["start.png", "finish.png"]
 # FINISH_LINE_IMAGE =
-USER_IMAGE = [["car1.png","car1-bad.png"],["car2.png","car2-bad.png"],
-              ["car3.png","car3-bad.png"], ["car4.png","car4-bad.png"]]
-COMPUTER_CAR_IMAGE = ["computer_car.png","computer_die.png"]
+USER_IMAGE = [["car-1.png","car1-bad.png"],["car-2.png","car2-bad.png"],
+              ["car-3.png","car3-bad.png"], ["car-4.png","car4-bad.png"]]
+COMPUTER_CAR_IMAGE = ["car-5.png","computer_die.png"]
 USER_COLOR = [WHITE, YELLOW, BLUE, RED]
 
 '''image url'''
-COMPUTER_CAR_URL = "https://raw.githubusercontent.com/yen900611/RacingCar/master/asset/image/computer_car.png"
-USER_CAR_URL = ["https://github.com/yen900611/RacingCar/blob/master/asset/image/car1.png?raw=true",
-                "https://github.com/yen900611/RacingCar/blob/master/asset/image/car2.png?raw=true",
-                "https://github.com/yen900611/RacingCar/blob/master/asset/image/car3.png?raw=true",
-                "https://github.com/yen900611/RacingCar/blob/master/asset/image/car4.png?raw=true"]
-BACKGROUND_URL = "https://github.com/yen900611/RacingCar/blob/master/asset/image/ground0.jpg?raw=true"
-INFO_COIN_URL = "https://github.com/yen900611/RacingCar/blob/master/asset/image/info_coin.png?raw=true"
-INFO_KM_URL = "https://github.com/yen900611/RacingCar/blob/master/asset/image/info_km.png?raw=true"
-FINISH_URL = "https://github.com/yen900611/RacingCar/blob/master/asset/image/finish.png?raw=true"
-START_URL = "https://github.com/yen900611/RacingCar/blob/master/asset/image/start.png?raw=true"
-COIN_URL = "https://github.com/yen900611/RacingCar/blob/master/asset/image/logo.png?raw=true"
+COMPUTER_CAR_URL = "https://raw.githubusercontent.com/yen900611/RacingCar/master/asset/image/car-5.png"
+USER_CAR_URL = ["https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/car-1.png",
+                "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/car-2.png",
+                "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/car-3.png",
+                "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/car-4.png"]
+BACKGROUND_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/ground0.jpg"
+INFO_COIN_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/info_coin.png"
+INFO_KM_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/info_km.png"
+FINISH_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/finish.png"
+START_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/start.png"
+COIN_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/coin.png"
 
 computerCar_init_position = [
     (650, 110), (650, 160), (650, 210), (650, 260), (650, 310), (650, 360), (650, 410), (650, 460), (650, 510),

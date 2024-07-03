@@ -105,10 +105,17 @@ class RacingCar(PaiaGame):
             else:
                 for user in self.attachements:
                     for single_rank in game_result:
-                        if single_rank['player'] == user['player']:
+                        if single_rank['player_num'] == user['player_num']:
                             match_single_rank = single_rank
                     user["accumulated_score"] += (5 - match_single_rank["single_rank"])
                     user["single_rank"] = match_single_rank["single_rank"]
+                #  TODO sort by accumulated_score and add rank in each user
+                # Sort users by accumulated_score in descending order and add rank
+            sorted_users = sorted(self.attachements, key=lambda x: x['accumulated_score'], reverse=True)
+
+            for rank, user in enumerate(sorted_users, start=1):
+                user["rank"] = rank
+
             if self.game_times < self.game_times_goal:
                 self.game_times += 1
                 return "RESET"
@@ -226,7 +233,7 @@ class RacingCar(PaiaGame):
         """
 
         return {"frame_used": self.frame_count,
-                "state": self.game_result_state,
+                "status": self.game_result_state,
                 "attachment": self.rank()
                 }
 
@@ -292,20 +299,20 @@ class RacingCar(PaiaGame):
         # if len(self.attachements)==0:
         #     self.attachements = game_result
         #     for user in self.attachements:
-        #         user["accumulated_score"] = 5 - user["single_rank"]
+        #         user["accumulated_score"] = 5 - user["rank"]
         #     return self.attachements
         #
         # for user in self.attachements:
         #     for single_rank in game_result:
         #         if single_rank['player'] == user['player']:
         #             match_single_rank = single_rank
-        #     user["accumulated_score"] += (5 - match_single_rank["single_rank"])
+        #     user["accumulated_score"] += (5 - match_single_rank["rank"])
         # if self.score:
         #     for user in self.score:
-        #         user["accumulated_score"] += (5 - user["single_rank"])
+        #         user["accumulated_score"] += (5 - user["rank"])
         # else:
         #     self.score = single_game_result
         #     for user in self.score:
-        #         user["accumulated_score"] = 5 - user["single_rank"]
+        #         user["accumulated_score"] = 5 - user["rank"]
 
         return self.attachements
