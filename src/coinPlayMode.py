@@ -114,12 +114,16 @@ class CoinMode(GameMode):
         :return:Bool
         '''
         if is_arrive:
-            self.state = GameResultState.FINISH
+            if self.is_single:
+                self.state = GameResultState.PASSED
+            else:
+                self.state = GameResultState.FINISH
             return True
         if self.is_single:
             if len(self.eliminated_user) == 1:
-                self.state = GameResultState.FAIL
+                self.state = GameResultState.UN_PASSED
                 return True
+
             return False
         else:
             if len(self.users) <= len(self.eliminated_user):

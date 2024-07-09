@@ -6,7 +6,7 @@ class MLPlay:
         self.other_cars_position = []
         self.coins_pos = []
         self.ai_name = ai_name
-        self.speed = random.randint(7,11)*10
+        self.speed = random.randint(9,11)*10
         print("Initial ml script")
         print(ai_name)
         print(kwargs)

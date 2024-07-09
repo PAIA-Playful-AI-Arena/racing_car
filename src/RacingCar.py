@@ -141,6 +141,7 @@ class RacingCar(PaiaGame):
         game_info["assets"].append(
             create_asset_init_data("computer_car", car_size[0], coin_size[1], sys_car_path, COMPUTER_CAR_URL))
         for i in range(self.user_num):
+            # TODO bad car
             game_info["assets"].append(
                 create_asset_init_data("player" + str(i + 1) + "_car", car_size[0], coin_size[1],
                                        path.join(ASSET_IMAGE_DIR, USER_IMAGE[i][0]), USER_CAR_URL[i]))
@@ -213,7 +214,7 @@ class RacingCar(PaiaGame):
                 coin_image = create_image_view_data("coin", coin[0], coin[1], coin_size[0], coin_size[1])
                 game_progress["object_list"].append(coin_image)
             for ind,user in enumerate(self.game_mode.users,start=1):
-                score = create_text_view_data(f"P{ind}  {round(user.coin_num):02d}", 560 + user.car_no * 110, 20, WHITE, "16px Arial")
+                score = create_text_view_data(f"P{ind}   {round(user.coin_num):02d}", 560 + user.car_no * 110, 20, WHITE, "16px Arial")
                 game_progress["foreground"].append(score)
         else:
             for ind,user in enumerate(self.game_mode.users,start=1):
