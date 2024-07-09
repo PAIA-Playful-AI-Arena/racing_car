@@ -141,6 +141,7 @@ class RacingCar(PaiaGame):
         game_info["assets"].append(
             create_asset_init_data("computer_car", car_size[0], coin_size[1], sys_car_path, COMPUTER_CAR_URL))
         for i in range(self.user_num):
+            # TODO bad car
             game_info["assets"].append(
                 create_asset_init_data("player" + str(i + 1) + "_car", car_size[0], coin_size[1],
                                        path.join(ASSET_IMAGE_DIR, USER_IMAGE[i][0]), USER_CAR_URL[i]))
@@ -148,19 +149,19 @@ class RacingCar(PaiaGame):
             create_asset_init_data("background", 2000, HEIGHT, path.join(ASSET_IMAGE_DIR, BACKGROUND_IMAGE[0]),
                                    BACKGROUND_URL))
         game_info["assets"].append(
-            create_asset_init_data("start_line", 45, 450, path.join(ASSET_IMAGE_DIR, START_LINE_IMAGE[0]), START_URL))
+            create_asset_init_data("start_line", 120, 450, path.join(ASSET_IMAGE_DIR, START_LINE_IMAGE[0]), START_URL))
         game_info["assets"].append(
-            create_asset_init_data("finish_line", 45, 450, path.join(ASSET_IMAGE_DIR, START_LINE_IMAGE[1]), FINISH_URL))
+            create_asset_init_data("finish_line", 120, 450, path.join(ASSET_IMAGE_DIR, START_LINE_IMAGE[1]), FINISH_URL))
         if self.game_type == "COIN":
             game_info["assets"].append(
                 create_asset_init_data("coin", coin_size[0], coin_size[1], path.join(ASSET_IMAGE_DIR, COIN_IMAGE),
                                        COIN_URL))
             game_info["assets"].append(
-                create_asset_init_data("info_coin", 319, 80, path.join(ASSET_IMAGE_DIR, RANKING_IMAGE[0]),
+                create_asset_init_data("info_coin", 513, 80, path.join(ASSET_IMAGE_DIR, RANKING_IMAGE[0]),
                                        INFO_COIN_URL))
         else:
             game_info["assets"].append(
-                create_asset_init_data("info_km", 319, 80, path.join(ASSET_IMAGE_DIR, RANKING_IMAGE[1]), INFO_KM_URL))
+                create_asset_init_data("info_km", 513, 80, path.join(ASSET_IMAGE_DIR, RANKING_IMAGE[1]), INFO_KM_URL))
 
         return game_info
 
@@ -181,9 +182,9 @@ class RacingCar(PaiaGame):
             "game_sys_info": {}
         }
         if self.game_type == "COIN":
-            info_board = create_image_view_data("info_coin", WIDTH - 315, 5, 319, 80)
+            info_board = create_image_view_data("info_coin", WIDTH - 517, 5, 513, 80)
         else:
-            info_board = create_image_view_data("info_km", WIDTH - 315, 5, 319, 80)
+            info_board = create_image_view_data("info_km", WIDTH - 517, 5, 513, 80)
         game_progress["foreground"].append(info_board)
         bg1 = create_image_view_data("background", self.game_mode.bg_x, 0, 2000, HEIGHT)
         bg2 = create_image_view_data("background", self.game_mode.rel_x, 0, 2000, HEIGHT)
@@ -212,12 +213,12 @@ class RacingCar(PaiaGame):
             for coin in scene_info["coin"]:
                 coin_image = create_image_view_data("coin", coin[0], coin[1], coin_size[0], coin_size[1])
                 game_progress["object_list"].append(coin_image)
-            for user in self.game_mode.users:
-                score = create_text_view_data(str(user.coin_num), 740 + user.car_no * 77, 45, WHITE, "16px Arial")
+            for ind,user in enumerate(self.game_mode.users,start=1):
+                score = create_text_view_data(f"P{ind}   {round(user.coin_num):02d}", 560 + user.car_no * 110, 20, WHITE, "16px Arial")
                 game_progress["foreground"].append(score)
         else:
-            for user in self.game_mode.users:
-                score = create_text_view_data(str(round(user.distance)) + "m", 725 + user.car_no * 77, 45, WHITE,
+            for ind,user in enumerate(self.game_mode.users,start=1):
+                score = create_text_view_data( f"P{ind}  {round(user.distance):5d}m", 560 + user.car_no * 110, 20, WHITE,
                                               "16px Arial")
                 game_progress["foreground"].append(score)
         # computer car

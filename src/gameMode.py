@@ -42,9 +42,9 @@ class GameMode(object):
         '''initial object'''
         for user in range(user_num):
             self._init_user(user)
-        self._init_lanes()
         self.line = Line(self.length)
         self.lanes.add(self.line)
+        self._init_lanes()
 
         '''state include GameResultState.FINISH、GameResultState.FAIL"'''
         self.state = GameResultState.FAIL
