@@ -4,7 +4,6 @@
 ![racing_car](https://img.shields.io/github/v/tag/yen900611/RacingCar)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![MLGame](https://img.shields.io/badge/MLGame->9.5.3.2a0-<COLOR>.svg)](https://github.com/PAIA-Playful-AI-Arena/MLGame)
-[![pygame](https://img.shields.io/badge/pygame-2.0.1-<COLOR>.svg)](https://github.com/pygame/pygame/releases/tag/2.0.1)
 
 來一場競速的排位賽吧！駕駛著自己的車子享受在馬路上狂飆的快感吧！注意前方與左右來車來妨礙你，閃避其他車子的步步逼近，同時還要小心速度太慢被遠遠甩在後頭喔！關卡還有金幣競爭模式，在競速之餘盡可能的去搶奪路上散落的金幣，衝向終點成為最終贏家。
 ![](https://i.imgur.com/QFEPZm0.gif)
@@ -12,8 +11,6 @@
 
 ---
 ## 版本更新（3.4.1）
-1. 增加 autoCar.py 可在AI使用，並自動玩遊戲 (感謝台南市資訊教育中心開發提供)
-2. 更新程式碼內容，以運行於 MLGame 9.5.*
 
 # 基礎介紹
 
@@ -66,7 +63,7 @@ game = RacingCar.RacingCar(user_num=2, game_mode="NORMAL", car_num=50, racetrack
     - 右鍵(D鍵)：車子向前加速    
     - 左鍵(A鍵)：車子剎車減速
     
-    車子的最高速度為15px/frame，當車子左右平移時速度將會略微下降為14.5px/frame。
+    車子的最高速度為15px/frame，當車子左右平移時速度將會略微下降為14px/frame。
     車子沒有加速或剎車時，會以0.9px/frame左右的速度怠速前進。
     
 2. 座標系統
@@ -185,7 +182,7 @@ class MLPlay:
 ```json
 {
   "frame_used": 100,
-  "state": "FAIL",
+  "status": "FAIL",
   "attachment": [
     {
         "player_num": "1P",
@@ -199,7 +196,7 @@ class MLPlay:
 ```
 
 - `frame_used`：表示使用了多少個frame
-- `state`：表示遊戲結束的狀態
+- `status`：表示遊戲結束的狀態
     - `FAIL`：遊戲失敗
     - `FINISH`：遊戲完成
 - `attachment`：紀錄遊戲各個玩家的結果與分數等資訊
@@ -210,5 +207,3 @@ class MLPlay:
     - `accumulated_score`：玩家的累計積分（用於玩多次遊戲時）
 
 ---
-
-![](https://i.imgur.com/ubPC8Fp.jpg)

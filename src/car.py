@@ -78,10 +78,10 @@ class UserCar(Car):
             return True
         if LEFT_cmd in control_list:
             self.moveLeft()
-            self.max_vel = 14.5
+            self.max_vel = 14
         if RIGHT_cmd in control_list:
             self.moveRight()
-            self.max_vel = 14.5
+            self.max_vel = 14
 
         if LEFT_cmd not in control_list and RIGHT_cmd not in control_list:
             self.max_vel = 15
