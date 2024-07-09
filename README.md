@@ -1,5 +1,5 @@
 # Racing Car
-<img src="https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/master/asset/logo.svg" alt="logo" width="100"/> 
+<img src="https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/logo.png" alt="logo" width="100"/> 
 
 ![racing_car](https://img.shields.io/github/v/tag/PAIA-Playful-AI-Arena/RacingCar)
 [![Python 3.9](https://img.shields.io/badge/python->3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
