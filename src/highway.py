@@ -28,7 +28,7 @@ class Lane(pygame.sprite.Sprite):
 class Line(pygame.sprite.Sprite):
     def __init__(self, length):
         pygame.sprite.Sprite.__init__(self)
-        self.rect = pygame.Rect(80, 100, 120, 450)
+        self.rect = pygame.Rect(80, 114, 120, 450)
         self.type = "start_line"
         self.distance = 60
         self.end_distance = length
