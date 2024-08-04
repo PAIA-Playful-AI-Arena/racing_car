@@ -197,8 +197,8 @@ class RacingCar(PaiaGame):
         game_progress["foreground"].append(block)
         # line and lane
         game_progress["object_list"].append(self.game_mode.line.get_asset_info())
-        for lane in self.game_mode.lanes:
-            game_progress["object_list"].append(lane.get_asset_info())
+        # for lane in self.game_mode.lanes:
+        #     game_progress["object_list"].append(lane.get_asset_info())
         # user
         for user in self.game_mode.users:
             user_image = create_image_view_data("player" + str(user.car_no + 1) + "_car", user.rect[0], user.rect[1],
