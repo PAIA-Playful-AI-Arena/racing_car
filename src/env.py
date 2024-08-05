@@ -46,7 +46,7 @@ COMPUTER_CAR_IMAGE = ["car-5.png","computer_die.png"]
 USER_COLOR = [WHITE, YELLOW, BLUE, RED]
 
 '''image url'''
-COMPUTER_CAR_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/RacingCar/master/asset/image/car-5.png"
+COMPUTER_CAR_URL = "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/RacingCar/main/asset/image/car-5.png"
 USER_CAR_URL = ["https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/car-1.png",
                 "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/car-2.png",
                 "https://raw.githubusercontent.com/PAIA-Playful-AI-Arena/racing_car/main/asset/image/car-3.png",
