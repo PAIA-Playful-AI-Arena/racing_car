@@ -5,8 +5,8 @@ from .coinPlayMode import CoinMode
 from .reliveMode import ReliveMode
 from mlgame.view.decorator import check_game_progress, check_game_result
 from mlgame.view.view_model import create_text_view_data, create_asset_init_data, create_image_view_data, \
-    create_line_view_data, Scene, create_polygon_view_data, create_rect_view_data
-from mlgame.game.paia_game import PaiaGame, GameResultState
+    Scene, create_rect_view_data
+from mlgame.game.paia_game import PaiaGame
 
 from .env import *
 from .sound_controller import *
@@ -15,7 +15,7 @@ from .sound_controller import *
 
 
 class RacingCar(PaiaGame):
-    def __init__(self, user_num: int, game_type, car_num, racetrack_length=15000, rounds=1, sound="off"):
+    def __init__(self, user_num: int, game_type, car_num, racetrack_length=15000, rounds=1, sound="off",*args,**kwargs):
         super().__init__(user_num=user_num)
         self.game_times_goal = rounds
         self.game_times = 1
